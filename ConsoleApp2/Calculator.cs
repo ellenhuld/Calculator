@@ -9,7 +9,7 @@ namespace Calculator
 {
     public class Calculator
     {
-        //hej
+        
        
 
         public double Add(double a, double b)
