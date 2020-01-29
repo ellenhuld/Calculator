@@ -9,16 +9,6 @@ namespace Calculator
 {
     public class Calculator
     {
-        //public double a { get; private set; }
-        //public double b { get; private set; }
-
-
-        //public Calculator()
-        //{
-        //    a = 4;
-        //    b = 6;
-
-        //}
 
         public double Add(double a, double b)
         {
