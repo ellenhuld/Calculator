@@ -10,6 +10,8 @@ namespace Calculator
     public class Calculator
     {
 
+        //kan i se det her
+
         public double Add(double a, double b)
         {
             return a + b;
