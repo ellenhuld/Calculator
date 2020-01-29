@@ -19,7 +19,7 @@ namespace Calculator
 
         public double Substrack(double a, double b)
         {
-            return a - b;
+            return a + b;
         }
 
         public double Multiply(double a, double b)
