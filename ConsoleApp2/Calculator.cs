@@ -10,7 +10,7 @@ namespace Calculator
     public class Calculator
     {
 
-        //kan i se det her
+       
 
         public double Add(double a, double b)
         {
@@ -19,7 +19,7 @@ namespace Calculator
 
         public double Substrack(double a, double b)
         {
-            return a + b;
+            return a - b;
         }
 
         public double Multiply(double a, double b)
