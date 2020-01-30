@@ -18,43 +18,39 @@ namespace Calculator
 
         public double Add(double a, double b)
         {
-            if (Accumulator == 0)
-            {
-                return a + b;
-            }
-            else 
-            return Accumulator + b;
+            Accumulator = a + b;
+            return Accumulator;
+        }
+        public double Add(double addend)
+        {
+            Accumulator = Accumulator + addend;
+            return Accumulator;
         }
 
         public double Substrack(double a, double b)
         {
-            if (Accumulator == 0)
-            {
-                return a - b;
-            }
-            else
-                return Accumulator - b;
+            Accumulator = a - b;
+            return Accumulator;
         }
-
+        public double Substrack(double subtractor)
+        {
+            Accumulator = Accumulator - subtractor;
+            return Accumulator;
+        }
         public double Multiply(double a, double b)
         {
-            if (Accumulator == 0)
-            {
-                return a * b;
-            }
-            else
-                return Accumulator * b;
+            Accumulator = a * b;
+            return Accumulator;
+        }
+        public double Multiply(double multiplier)
+        {
+            Accumulator = Accumulator * multiplier;
+            return Accumulator;
         }
 
         public double Power(double a, double b)
         {
-            if (Accumulator == 0)
-            {
-                return Math.Pow(a, b);
-            }
-            else
-                return Accumulator
-            
+            return Math.Pow(a, b);               
         }
 
        
