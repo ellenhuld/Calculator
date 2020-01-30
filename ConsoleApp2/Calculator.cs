@@ -50,9 +50,14 @@ namespace ConsoleApp2
 
         public double Power(double a, double b)
         {
-            return Math.Pow(a, b);               
+            Accumulator = Math.Pow(a, b);
+            return Accumulator;               
         }
-
+        public double Power(double exponent)
+        {
+            Accumulator = Math.Pow(Accumulator, exponent);
+            return Accumulator;
+        }
        
 
 
