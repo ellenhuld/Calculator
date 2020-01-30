@@ -10,28 +10,54 @@ namespace Calculator
     public class Calculator
     {
         //hej
-       
+        public double Accumulator { get; private set; }
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
 
         public double Add(double a, double b)
         {
-            return a + b;
+            if (Accumulator == 0)
+            {
+                return a + b;
+            }
+            else 
+            return Accumulator + b;
         }
 
         public double Substrack(double a, double b)
         {
-            return a - b;
+            if (Accumulator == 0)
+            {
+                return a - b;
+            }
+            else
+                return Accumulator - b;
         }
 
         public double Multiply(double a, double b)
         {
-            return a * b;
+            if (Accumulator == 0)
+            {
+                return a * b;
+            }
+            else
+                return Accumulator * b;
         }
 
         public double Power(double a, double b)
         {
-            return Math.Pow(a, b);
+            if (Accumulator == 0)
+            {
+                return Math.Pow(a, b);
+            }
+            else
+                return Accumulator
+            
         }
 
+       
 
 
     }
