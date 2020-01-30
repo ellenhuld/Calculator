@@ -24,6 +24,12 @@ namespace ConsoleApp2
             //Giver 30
             Console.WriteLine(calcObj.Multiply(2));
 
+            //Clear; Accumulator = 0
+            calcObj.Clear();
+
+            //Skal lægge 5 til 0
+            Console.WriteLine(calcObj.Add(5));
+
         }
     }
 }
