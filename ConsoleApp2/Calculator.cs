@@ -11,6 +11,7 @@ namespace ConsoleApp2
     {
         //hej
         public double Accumulator { get; private set; }
+        
         public void Clear()
         {
             Accumulator = 0;
