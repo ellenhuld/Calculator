@@ -27,8 +27,11 @@ namespace ConsoleApp2
             //Clear; Accumulator = 0
             calcObj.Clear();
 
-            //Skal lægge 5 til 0
+            //Skal lægge 5 til 0 = 5
             Console.WriteLine(calcObj.Add(5));
+
+            //Opløfter i anden = 25
+            Console.WriteLine(calcObj.Power(2));
 
         }
     }
