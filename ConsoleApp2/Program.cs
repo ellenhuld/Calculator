@@ -10,6 +10,11 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            Calculator calcObj = new Calculator();
+
+            Console.WriteLine( calcObj.Add(5,7) );
+            Console.WriteLine( calcObj.Add(8) );
+
         }
     }
 }
