@@ -12,6 +12,19 @@ namespace ConsoleApp2
         {
             Calculator calcObj = new Calculator();
 
+            //12
+            Console.WriteLine(calcObj.Substrack(20,8));
+
+            //25
+            Console.WriteLine(calcObj.Multiply(5,5));
+
+            //64
+            Console.WriteLine(calcObj.Power(2,6));
+
+            calcObj.Clear();
+            Console.WriteLine("\n");
+
+            //Overload metoder
             //Giver 12
             Console.WriteLine(calcObj.Add(5,7));
 
