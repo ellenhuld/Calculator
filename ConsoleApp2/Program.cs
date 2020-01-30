@@ -12,8 +12,17 @@ namespace ConsoleApp2
         {
             Calculator calcObj = new Calculator();
 
-            Console.WriteLine( calcObj.Add(5,7) );
-            Console.WriteLine( calcObj.Add(8) );
+            //Giver 12
+            Console.WriteLine(calcObj.Add(5,7));
+
+            //Giver 20
+            Console.WriteLine(calcObj.Add(8));
+
+            //Giver 15
+            Console.WriteLine(calcObj.Substrack(5));
+
+            //Giver 30
+            Console.WriteLine(calcObj.Multiply(2));
 
         }
     }
