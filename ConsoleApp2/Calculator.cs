@@ -9,7 +9,7 @@ namespace ConsoleApp2
 {
     public class Calculator
     {
-        //hej
+        
         public double Accumulator { get; private set; }
         
         public void Clear()
@@ -59,7 +59,20 @@ namespace ConsoleApp2
             Accumulator = Math.Pow(Accumulator, exponent);
             return Accumulator;
         }
-       
+
+        public double Divide(double a, double b)
+        {
+            Accumulator = a / b;
+            return Accumulator;
+        }
+
+        public double Divide(double devider)
+        {
+            Accumulator = Accumulator / devider;
+            return Accumulator;
+        }
+
+
 
 
     }
