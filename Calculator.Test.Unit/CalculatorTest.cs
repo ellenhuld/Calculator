@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework; //tilføjes automatiskt her
-using CalculatorHandIn;
+using CalculatorHandInTesting;
 
 using NUnit.Framework.Constraints;
 
@@ -23,13 +23,14 @@ namespace CalculatorTestUnit
         [SetUp]
         public void Setup()
         {
-            _uut = new CalculatorHandIn.Calculator();
+            _uut = new Calculator();
         }
 
         [TestCase(3, 2, 5)]
         [TestCase(-3, -2, -5)]
         [TestCase(-3,2, -1)]
         [TestCase(3, -2, 1)]
+        [TestCase(2, -2, 0)]
         public void Add_AddPosAndNegNumbers_ResultIsCorrect(int a, int b, int result)
         {
             Assert.That(_uut.Add(a, b), Is.EqualTo(result));

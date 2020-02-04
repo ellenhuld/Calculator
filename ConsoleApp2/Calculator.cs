@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalculatorHandIn
+namespace CalculatorHandInTesting
 {
     public class Calculator
     {

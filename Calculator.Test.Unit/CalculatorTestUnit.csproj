@@ -54,9 +54,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp2\CalculatorHandIn.csproj">
+    <ProjectReference Include="..\ConsoleApp2\CalculatorHandInTesting.csproj">
       <Project>{618343ff-1595-49f9-98a9-f00932487807}</Project>
-      <Name>CalculatorHandIn</Name>
+      <Name>CalculatorHandInTesting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
