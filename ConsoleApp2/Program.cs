@@ -45,7 +45,7 @@ namespace ConsoleApp2
 
             //Opløfter i anden = 25
             Console.WriteLine(calcObj.Power(2));
-
+            
         }
     }
 }
