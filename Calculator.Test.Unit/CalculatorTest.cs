@@ -4,68 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework; //tilføjes automatiskt her
+using CalculatorHandIn;
+
+using NUnit.Framework.Constraints;
+
+
 
 // uut = unit under test, ofte det navn af de variable man arbejder med
 
-namespace Calculator.Test.Unit
+namespace CalculatorTestUnit
 {
     [TestFixture] //attribute som fortæller Nunit at det er sådan at det er en klasse - angives med [], holder styr på en eller flere tests
     public class CalculatorTest
     {
-        
-        //[Test] //integerer ved at skrive et attribute og bagefter en metode uden parameter
 
-
-        //[SetUp]
-        //public void Setup()
-        //{
-        //    //arrange
-        //    var uut = new Calculator();
-        //}
-
-        //[TestCase(3, 2, 1)]
-        //[TestCase(-3, -2, -1)]
-        //[TestCase(-3, 2, -5)]
-        //[TestCase(3, -2, 5)]
-
-       // public void AddItem_ResultIsCorrect() // det er min metode skal prøve at teste
-
-            //hvad skal du teste_hvadforventerdu_hvadreturneres 
-
-        //{
-        //    //Arrange
-        //    //var uut = new Calculator();
-
-
-        //    Act
-        //    uut.Add(4, 6);
-
-        //    Assert
-        //    Assert.That(uut.Add(4, 6), Is.EqualTo(10));
-        //    Assert.That(uut.Substrack(4, 6), Is.EqualTo(-2));
-        //    Assert.That(uut.Multiply(4, 6), Is.EqualTo(24));
-        //    Assert.That(uut.Power(4, 6), Is.EqualTo(4096));
-
-        ///}
-
-
-        //kan også skrives på anden måde
-
-
-        //Assert.That(uut.Add(a,b),Is.EqualTo(result));
-
-
-        private ConsoleApp2.Calculator _uut;
+        private Calculator _uut;
 
         [SetUp]
         public void Setup()
         {
-            _uut = new ConsoleApp2.Calculator();
+            _uut = new CalculatorHandIn.Calculator();
         }
 
         [TestCase(3, 2, 5)]
         [TestCase(-3, -2, -5)]
-        [TestCase(-3, 2, -1)]
+        [TestCase(-3,2, -1)]
         [TestCase(3, -2, 1)]
         public void Add_AddPosAndNegNumbers_ResultIsCorrect(int a, int b, int result)
         {
@@ -108,14 +71,94 @@ namespace Calculator.Test.Unit
             Assert.That(_uut.Power(x, exp), Is.EqualTo(result));
         }
 
+        
+
         [TestCase(4, 2, 2)]
         [TestCase(6, 3, 2)]
         [TestCase(8, 5, 1.6)]
-        [TestCase(4, 0, null)]
+
         public void Divide_DivideNumbers_ResultIsCorrect(double a, double b, double result)
         {
             Assert.That(_uut.Divide(a,b), Is.EqualTo(result));
         }
 
+        
+
+        //[TestCase]
+        //public void TestSanity()
+        //{
+        //    Assert.Throws<DivideByZeroException>(new TestDelegate(() => DivideByZero()));
+        //}
+
+        //private void DivideByZero()
+        //{
+        //    // Parse "0" to make sure to get an error at run time, not compile time.
+        //    var a = (1 / Double.Parse("0"));
+        //}
+
+        //[Test]
+        //public void DivideZeroTest()
+        //{
+        //    _uut = new Calculator();
+        //    double n = _uut.Divide(24, 0);
+        //    Assert.AreEqual(-999, n);
+
+        //}
+
+        //public double Divide(double a, double b)
+        //{
+        //    try
+        //    {
+        //        return a/b;
+        //    }
+        //    catch (DivideByZeroException e)
+        //    {
+        //        return -999;
+        //    }
     }
-}
+
+
+
+        //[Test] //integerer ved at skriv et attribute og bagefter en metode uden parameter
+
+
+        //[SetUp]
+        //public void Setup()
+        //{
+        //    //arrange
+        //    var uut = new Calculator();
+        //}
+
+        //[TestCase(3, 2, 1)]
+        //[TestCase(-3, -2, -1)]
+        //[TestCase(-3, 2, -5)]
+        //[TestCase(3, -2, 5)]
+
+        // public void AddItem_ResultIsCorrect() // det er min metode skal prøve at teste
+
+        //hvad skal du teste_hvadforventerdu_hvadreturneres 
+
+        //{
+        //    //Arrange
+        //    //var uut = new Calculator();
+
+
+        //    Act
+        //    uut.Add(4, 6);
+
+        //    Assert
+        //    Assert.That(uut.Add(4, 6), Is.EqualTo(10));
+        //    Assert.That(uut.Substrack(4, 6), Is.EqualTo(-2));
+        //    Assert.That(uut.Multiply(4, 6), Is.EqualTo(24));
+        //    Assert.That(uut.Power(4, 6), Is.EqualTo(4096));
+
+        //}
+
+
+        //kan også skrives på anden måde
+
+
+        //Assert.That(uut.Add(a,b),Is.EqualTo(result));
+
+    }
+

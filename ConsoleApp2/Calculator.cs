@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace CalculatorHandIn
 {
     public class Calculator
     {
@@ -66,9 +66,9 @@ namespace ConsoleApp2
             return Accumulator;
         }
 
-        public double Divide(double devider)
+        public double Divide(double divider)
         {
-            Accumulator = Accumulator / devider;
+            Accumulator = Accumulator / divider;
             return Accumulator;
         }
 
