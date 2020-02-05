@@ -54,7 +54,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp2\CalculatorHandInTesting.csproj">
+    <ProjectReference Include="..\CalculatorHandInTesting\CalculatorHandInTesting.csproj">
       <Project>{618343ff-1595-49f9-98a9-f00932487807}</Project>
       <Name>CalculatorHandInTesting</Name>
     </ProjectReference>
