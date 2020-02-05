@@ -11,11 +11,9 @@ namespace Calculator.Test.Unit
 {
     [TestFixture] //attribute som fortæller Nunit at det er sådan at det er en klasse - angives med [], holder styr på en eller flere tests
     public class CalculatorTest
-
-
     {
-
-        [Test] //integerer ved at skrive et attribute og bagefter en metode uden parameter
+        
+        //[Test] //integerer ved at skrive et attribute og bagefter en metode uden parameter
 
 
         //[SetUp]
@@ -30,40 +28,39 @@ namespace Calculator.Test.Unit
         //[TestCase(-3, 2, -5)]
         //[TestCase(3, -2, 5)]
 
-        public void AddItem_ResultIsCorrect() // det er min metode skal prøve at teste
+       // public void AddItem_ResultIsCorrect() // det er min metode skal prøve at teste
 
             //hvad skal du teste_hvadforventerdu_hvadreturneres 
 
-        {
-            //Arrange
-            var uut = new Calculator();
+        //{
+        //    //Arrange
+        //    //var uut = new Calculator();
 
 
-            //Act
-            //uut.Add(4, 6);
+        //    Act
+        //    uut.Add(4, 6);
 
-            //Assert
-            Assert.That(uut.Add(4,6), Is.EqualTo(10));
-            Assert.That(uut.Substrack(4,6), Is.EqualTo(-2));
-            Assert.That(uut.Multiply(4, 6), Is.EqualTo(24));
-            Assert.That(uut.Power(4,6), Is.EqualTo(4096));
+        //    Assert
+        //    Assert.That(uut.Add(4, 6), Is.EqualTo(10));
+        //    Assert.That(uut.Substrack(4, 6), Is.EqualTo(-2));
+        //    Assert.That(uut.Multiply(4, 6), Is.EqualTo(24));
+        //    Assert.That(uut.Power(4, 6), Is.EqualTo(4096));
 
-        }
+        ///}
 
 
         //kan også skrives på anden måde
 
 
-
         //Assert.That(uut.Add(a,b),Is.EqualTo(result));
 
 
-        private Calculator _uut;
+        private ConsoleApp2.Calculator _uut;
 
         [SetUp]
         public void Setup()
         {
-            _uut = new Calculator();
+            _uut = new ConsoleApp2.Calculator();
         }
 
         [TestCase(3, 2, 5)]
@@ -92,7 +89,7 @@ namespace Calculator.Test.Unit
         [TestCase(0, -2, 0)]
         [TestCase(-2, 0, 0)]
         [TestCase(0, 0, 0)]
-        public void Multiply_MultiplyNunmbers_ResultIsCorrect(int a, int b, int result)
+        public void Multiply_MultiplyNumbers_ResultIsCorrect(int a, int b, int result)
         {
             Assert.That(_uut.Multiply(a, b), Is.EqualTo(result));
         }
@@ -110,5 +107,15 @@ namespace Calculator.Test.Unit
         {
             Assert.That(_uut.Power(x, exp), Is.EqualTo(result));
         }
+
+        [TestCase(4, 2, 2)]
+        [TestCase(6, 3, 2)]
+        [TestCase(8, 5, 1.6)]
+        [TestCase(4, 0, null)]
+        public void Divide_DivideNumbers_ResultIsCorrect(double a, double b, double result)
+        {
+            Assert.That(_uut.Divide(a,b), Is.EqualTo(result));
+        }
+
     }
 }
