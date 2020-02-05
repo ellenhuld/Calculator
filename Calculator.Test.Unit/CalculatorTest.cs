@@ -77,12 +77,17 @@ namespace CalculatorTestUnit
         [TestCase(4, 2, 2)]
         [TestCase(6, 3, 2)]
         [TestCase(8, 5, 1.6)]
-
         public void Divide_DivideNumbers_ResultIsCorrect(double a, double b, double result)
         {
             Assert.That(_uut.Divide(a,b), Is.EqualTo(result));
         }
 
+        [TestCase(4, 0)]
+        public void Divide_DivedeByZero_ResulExeption(int a, int b)
+        {
+            Assert.Throws<DivideByZeroException>(() => _uut.Divide(a, b));
+        }
+        
         
 
         //[TestCase]

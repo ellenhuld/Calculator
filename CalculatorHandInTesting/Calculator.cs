@@ -62,8 +62,17 @@ namespace CalculatorHandInTesting
 
         public double Divide(double a, double b)
         {
-            Accumulator = a / b;
-            return Accumulator;
+            if (b == 0)
+            {
+                throw new DivideByZeroException();
+
+            }
+            else
+            {
+                Accumulator = a / b;
+                return Accumulator;
+
+            }
         }
 
         public double Divide(double divider)
@@ -71,6 +80,11 @@ namespace CalculatorHandInTesting
             Accumulator = Accumulator / divider;
             return Accumulator;
         }
+
+        //public double DivideInts(int a, int b)
+        //{
+        //    return a / b;
+        //}
 
 
 
