@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace CalculatorHandIn
 {
     class Program
     {
         static void Main(string[] args)
         {
+
             Calculator calcObj = new Calculator();
 
             //12
@@ -46,7 +47,15 @@ namespace ConsoleApp2
             //Opløfter i anden = 25
             Console.WriteLine(calcObj.Power(2));
 
-            Console.WriteLine(calcObj.Power(5,6));
+            //Divide 6 med 2 
+            Console.WriteLine(calcObj.Divide(6));
+
+
+            //divided med 0
+            double zero = 0d;
+            Console.WriteLine(1d / zero);  // Infinity
+            Console.WriteLine(0d / zero);  // NaN
+            Console.WriteLine(-1d / zero); // -Infinity
         }
     }
 }
