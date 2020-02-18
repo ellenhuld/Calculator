@@ -82,13 +82,30 @@ namespace CalculatorTestUnit
             Assert.That(_uut.Divide(a,b), Is.EqualTo(result));
         }
 
-        [TestCase(4, 0)]
-        public void Divide_DivedeByZero_ResulExeption(int a, int b)
+        //[TestCase(4, 0)]
+        //public void Divide_DivedeByZero_ResultExeption(int a, int b)
+        //{
+        //    Assert.Throws<DivideByZeroException>(() => _uut.Divide(a, b));
+        //}
+
+        //[TestCase(4, 4)]
+        //public void Divide_DivedeByZero_ResultDoesNotThrowExeption(int a, int b)
+        //{
+        //    Assert.DoesNotThrow(() => _uut.Divide(a, b));
+        //}
+
+        [TestCase(4.2, 0)]
+        public void Divide_DivedeByZero_ResultExeption(double a, double b)
         {
             Assert.Throws<DivideByZeroException>(() => _uut.Divide(a, b));
         }
-        
-        
+
+        [TestCase(4.2, 4.3)]
+        public void Divide_DivedeByZero_ResultDoesNotThrowExeption(double a, double b)
+        {
+            Assert.DoesNotThrow(() => _uut.Divide(a, b));
+        }
+
 
         //[TestCase]
         //public void TestSanity()

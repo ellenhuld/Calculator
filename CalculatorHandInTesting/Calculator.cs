@@ -65,7 +65,6 @@ namespace CalculatorHandInTesting
             if (b == 0)
             {
                 throw new DivideByZeroException();
-
             }
             else
             {
